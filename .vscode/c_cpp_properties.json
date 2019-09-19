@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "ARM",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "\"C:/Program Files (x86)/GNU Tools ARM Embedded/8 2019-q3-update/bin/arm-none-eabi-gcc\"",
+            "intelliSenseMode": "gcc-x64",
+            "compilerArgs": [
+                "-mcpu=cortex-m4"
+            ]
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Microcontroller",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/${workspaceRootFolderName}.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "device": "STM32F410RB",
+            "configFiles": [
+                "board/st_nucleo_f4.cfg"
+            ],
+            "swoConfig": {
+                "enabled": true,
+                "swoFrequency": 1800000,
+                "cpuFrequency": 96000000,
+                "source": "probe",
+                "decoders": [
+                {
+                    "port": 0,
+                    "label": "Output",
+                    "type": "console"
+                }
+            ]
+            },
+            "preLaunchTask": "Build"
+        },
+    ]
+}
