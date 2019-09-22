@@ -7,6 +7,10 @@
         "task.h": "c",
         "stddef.h": "c",
         "main.h": "c",
-        "stm32f4xx_hal.h": "c"
+        "stm32f4xx_hal.h": "c",
+        "adc.h": "c",
+        "usart.h": "c",
+        "tim.h": "c",
+        "wifi.h": "c"
     }
 }
