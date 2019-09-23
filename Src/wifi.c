@@ -2,6 +2,6 @@
 
 void StartWifiTask(void const * argument)
 {
-    printf("wifi task start");
+    printf("\nwifi task start\n");
     for(;;);
 }

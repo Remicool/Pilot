@@ -36,6 +36,13 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// For OpenOCD multi-thread debugging 
+#ifdef __GNUC__
+#define USED __attribute__((used))
+#else
+#define USED
+#endif
+const int USED uxTopUsedPriority = configMAX_PRIORITIES - 1;
 
 /* USER CODE END PD */
 
@@ -46,7 +53,6 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-osThreadId uartTaskHandle;
 osThreadId wifiTaskHandle;
 osThreadId pwmTaskHandle;
 /* USER CODE END Variables */
@@ -54,7 +60,6 @@ osThreadId defaultTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-void StartUartTask(void const * argument);
 void StartWifiTask(void const * argument);
 void StartPWMTask(void const * argument);
 /* USER CODE END FunctionPrototypes */
@@ -137,8 +142,7 @@ void StartDefaultTask(void const * argument)
   {
     // Toggle the LD2 blink!
     HAL_GPIO_TogglePin(LD2_Blink_GPIO_Port , LD2_Blink_Pin);
-    // printf("Hello World!\n");
-    osDelay(200);
+    osDelay(500);
   }
   /* USER CODE END StartDefaultTask */
 }

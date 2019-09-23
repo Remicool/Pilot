@@ -28,7 +28,9 @@
                 }
             ]
             },
-            "preLaunchTask": "Build"
+            "preLaunchTask": "Build",
+            "rtos": "FreeRTOS",
+            "svdFile": "STM32F410.svd"
         },
     ]
 }

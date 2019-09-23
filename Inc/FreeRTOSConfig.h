@@ -25,6 +25,8 @@
  *
  * 1 tab == 4 spaces!
  */
+// For Runtime Debug. Enable vTasksList() and GDB multi-threads.
+#define RUNTIME_DEBUG 
  /* USER CODE END Header */
 
 #ifndef FREERTOS_CONFIG_H
@@ -125,6 +127,10 @@ standard names. */
 
 /* USER CODE BEGIN Defines */   	      
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
+#ifdef RUNTIME_DEBUG
+    #define configUSE_TRACE_FACILITY 1
+    #define configUSE_STATS_FORMATTING_FUNCTIONS 1
+#endif
 /* USER CODE END Defines */ 
 
 #endif /* FREERTOS_CONFIG_H */
