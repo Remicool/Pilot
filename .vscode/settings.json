@@ -14,6 +14,7 @@
         "wifi.h": "c",
         "projdefs.h": "c",
         "freertosconfig.h": "c",
-        "pwm.h": "c"
+        "pwm.h": "c",
+        "motor.h": "c"
     }
 }

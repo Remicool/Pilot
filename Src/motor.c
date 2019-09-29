@@ -1,5 +1,5 @@
 #include "tim.h"
-#include "pwm.h"
+#include "motor.h"
 #include <stdio.h>
 
 void StartPWMTask(void const * argument)
