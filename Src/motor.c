@@ -2,7 +2,7 @@
 #include "motor.h"
 #include <stdio.h>
 
-void StartPWMTask(void const * argument)
+void StartMotorTask(void const * argument)
 {
     HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
