@@ -142,7 +142,7 @@ void StartDefaultTask(void const * argument)
   {
     // Toggle the LD2 blink!
     HAL_GPIO_TogglePin(GPIOA , GPIO_PIN_5);
-    printf("hello world\r\n");
+    // printf("hello world\r\n");
     osDelay(500);
   }
   /* USER CODE END StartDefaultTask */

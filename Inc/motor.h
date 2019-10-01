@@ -8,7 +8,12 @@ extern "C" {
 #include "cmsis_os.h"
 #include "stm32f4xx_hal.h"
 
-extern void setPWMDutyCycle(uint8_t channel, float percent);
+typedef enum{
+    WHEEL_LEFT,
+    WHEEL_RIGHT
+} Wheel_LR;
+
+extern void setWheelVel(Wheel_LR dir, int8_t cmd);
 
 #ifdef __cplusplus
 }
