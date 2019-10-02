@@ -24,7 +24,7 @@ For open source software:
     - For Linux `sudo apt install gcc-arm-none-eabi`
 
 - Adapter to board: OpenOCD for [Windows](https://gnutoolchains.com/arm-eabi/openocd/) for [Linux](https://sourceforge.net/projects/openocd/)
-  - For Linux **DO NOT USE** `sudo apt install openocd`. The 
+  - For Linux **DO NOT USE** `sudo apt install openocd`. The version is BUGGY.
 
 - Editor: [VS code](https://code.visualstudio.com/Download)
 
