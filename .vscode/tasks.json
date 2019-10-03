@@ -17,8 +17,8 @@
         {
             "label": "Upload Program",
             "type": "shell",
-            "command": "make upload",
-            "args": ["-j4"],
+            "command": "make",
+            "args": ["upload", "-j4"],
             "problemMatcher": []
         }
     ]

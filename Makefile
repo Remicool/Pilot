@@ -212,7 +212,7 @@ clean:
 	del /Q $(BUILD_DIR)
   
 upload: $(BUILD_DIR)/$(TARGET).elf
-	openocd  -f board\st_nucleo_f4.cfg -c "program build/$(TARGET).elf verify reset exit"
+	openocd  -f board/st_nucleo_f4.cfg -c "program build/$(TARGET).elf verify reset exit"
 
 #######################################
 # dependencies
