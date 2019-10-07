@@ -8,8 +8,6 @@ extern "C" {
 #include "cmsis_os.h"
 #include <stdio.h>
 
-osThreadId wifiTaskHandle;
-
 void StartWifiTask(void const * argument);
 
 #ifdef __cplusplus
