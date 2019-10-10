@@ -53,7 +53,7 @@ const int USED uxTopUsedPriority = configMAX_PRIORITIES - 1;
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN Variables */
-// osThreadId wifiTaskHandle;
+osThreadId wifiTaskHandle;
 osThreadId motorTaskHandle;
 /* USER CODE END Variables */
 osThreadId defaultTaskHandle;
@@ -121,7 +121,7 @@ void MX_FREERTOS_Init(void) {
   motorTaskHandle = osThreadCreate(osThread(motorTask), NULL);
 
   osThreadDef(wifiTask, StartWifiTask, osPriorityNormal, 0, 128);
-  osThreadId wifiTaskHandle = osThreadCreate(osThread(wifiTask), NULL);
+  wifiTaskHandle = osThreadCreate(osThread(wifiTask), NULL);
   /* USER CODE END RTOS_THREADS */
 
 }
