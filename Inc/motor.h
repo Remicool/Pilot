@@ -29,7 +29,7 @@ float getWheelAngDeg(Wheel_LR dir);
 
 // dir = WHEEL_LEFT/WHEEL_RIGHT
 // need 1ms
-static float getWheelVelDeg(Wheel_LR dir);
+float getWheelVelDeg(Wheel_LR dir);
 
 typedef struct PID_Controller{
     float kp;
